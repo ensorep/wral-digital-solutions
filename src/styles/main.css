@@ -1,0 +1,15 @@
+html,
+body,
+#app {
+  margin: 0;
+  padding: 0;
+}
+#app {
+  background-image: url("../images/skyline.jpg");
+  background-position: center;
+  background-size: cover;
+  height: 100vh;
+}
+#app h1 {
+  margin: 0;
+}

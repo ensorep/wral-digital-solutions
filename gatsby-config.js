@@ -1,11 +1,24 @@
 module.exports = {
   siteMetadata: {
-    title: `Gatsby Default Starter`,
-    description: `Kick off your next, great Gatsby project with this default starter. This barebones starter ships with the main Gatsby configuration files you might need.`,
-    author: `@gatsbyjs`,
+    title: `WRAL Digital Solutions`,
+    description: `Wral Digital Solutions Refresh Gatsby Site`,
+    author: `@taorep`,
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
+    `gatsby-plugin-sass`,
+    {
+      resolve: `gatsby-plugin-material-ui`,
+      options: { 
+        theme: {
+          palette: {
+              primary: {
+                  main: '#BA3D3B', // new color here
+              }
+          },
+      },
+    },
+  },
     {
       resolve: `gatsby-source-filesystem`,
       options: {
@@ -18,8 +31,8 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `gatsby-starter-default`,
-        short_name: `starter`,
+        name: `wral-digital-solutions`,
+        short_name: `wral-ds`,
         start_url: `/`,
         background_color: `#663399`,
         theme_color: `#663399`,

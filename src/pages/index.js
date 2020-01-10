@@ -1,21 +1,15 @@
-import React from "react"
-import { Link } from "gatsby"
-
-import Layout from "../components/layout"
-import Image from "../components/image"
-import SEO from "../components/seo"
-
-const IndexPage = () => (
-  <Layout>
-    <SEO title="Home" />
-    <h1>Hi people</h1>
-    <p>Welcome to your new Gatsby site.</p>
-    <p>Now go build something great.</p>
-    <div style={{ maxWidth: `300px`, marginBottom: `1.45rem` }}>
-      <Image />
+import React from 'react';
+import logo from '../images/logo.png'
+import {FontAwesomeIcon} from '@fortawesome/react-fontawesome'
+import {faEquals} from '@fortawesome/free-solid-svg-icons'
+export default () => (
+    <div id="app">
+      <FontAwesomeIcon id="menu" icon={faEquals}/>
+      <div className="overlay"> </div>
+      <img className="logo" src={logo} alt="logo"/>
+      <span className="award-winning">award winning</span>
+      <h4 className="tagline">Web Design + Digital Marketing</h4>
+      <button type="button" className="cta_learn-more">Learn more</button>
     </div>
-    <Link to="/page-2/">Go to page 2</Link>
-  </Layout>
-)
+  );
 
-export default IndexPage
