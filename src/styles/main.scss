@@ -1,3 +1,10 @@
+:root {
+  --mobile-menu-offset: -70vw;
+  --menu-overlay-opacity: 0;
+  --menu-transition-speed: .25s;
+}
+
+
 $stroke-width: 7px;
 $grid-size: 7;
 $accent: #F9D043;
@@ -73,15 +80,49 @@ body,
     letter-spacing: 2px;
     color: #fff;
     background-color: #2996CB;
+    background: -webkit-linear-gradient(to left, #19547b, #2996CB);
+    background: linear-gradient(to left, #19547b, #2996CB);
     border: none;
     border-radius: 3px;
   }
 
-  #menu {
+  #icon-menu {
     font-size: 1.95rem;
     align-self: center;
     justify-self: center;
     margin: auto;
     grid-area: 1 / 1 / 1 / 3;
+    z-index: 3;
+
+  }
+
+  .mobile-menu {
+    position: absolute;
+    background-color: #00000059;
+    height: 100vh;
+    width: 100%;
+    z-index: 2;
+    transition: var(--menu-transition-speed);
+    opacity: var(--menu-overlay-opacity);
+    &_list {
+      display: flex;
+      position: relative;
+      left: var(--mobile-menu-offset);
+      flex-direction: column;
+      height: 100%;
+      justify-content: center;
+      padding-inline-start: 2rem;
+      background-color: #2996cb;
+      background: linear-gradient(320deg, #19547b, #2996CB 50%);
+      width: 50%;
+      margin-block-start: 0;
+      transition: var(--menu-transition-speed);
+    }
+    &_link {
+      text-decoration: none;
+      color: #fff;
+      padding: 1rem 0;
+      font-size: 1.5rem;
+    }
   }
 }
